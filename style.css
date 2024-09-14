@@ -1,0 +1,282 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply Google Font */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #3f72af;
+}
+
+/* Form Section */
+#form-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #112d4e;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: 600;
+    color: #3f72af;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #3f72af;
+    outline: none;
+}
+
+button {
+    background-color: #3f72af;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #112d4e;
+}
+
+/* Resume Preview Section */
+#resume-preview {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#resume-output {
+    width: 100%;
+    max-width: 800px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #112d4e;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+    font-size: 1.1rem;
+}
+
+/* Toggle Button */
+#toggle-skills-btn {
+    background-color: #f9a826;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    display: block;
+    margin: 20px 0;
+}
+
+#toggle-skills-btn:hover {
+    background-color: #f8961e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    form,
+    #resume-preview {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p, ul {
+        font-size: 1rem;
+    }
+
+    .profile-picture img {
+        width: 120px;
+        height: 120px;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    #resume-output {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p, ul {
+        font-size: 0.9rem;
+    }
+
+    .profile-picture img {
+        width: 100px;
+        height: 100px;
+    }
+
+    button {
+        padding: 8px;
+    }
+}
+
+
+/* Prevent Text Overflow in All Sections */
+#resume-preview p,
+#resume-preview ul {
+    word-wrap: break-word;  /* Break long words */
+    word-break: break-word; /* Break words at the boundary */
+}
+
+/* Education and Skills Section - Prevent Overflow */
+#resume-preview .education,
+#resume-preview .skills {
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Max Height with Scroll for Long Content */
+#resume-preview .skills {
+    max-height: 200px;   /* Set a maximum height */
+    overflow-y: auto;    /* Allow vertical scrolling if content overflows */
+    padding: 10px;
+    background-color: #f0f4f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#resume-preview .education {
+    max-height: 250px;   /* Set a maximum height */
+    overflow-y: auto;    /* Allow vertical scrolling if content overflows */
+    padding: 10px;
+    background-color: #f0f4f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #resume-preview .skills,
+    #resume-preview .education {
+        max-height: 150px;
+        overflow-y: auto;
+    }
+}
+
+/* Profile picture container and image */
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3f72af;
+}

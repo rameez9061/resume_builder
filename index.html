@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive Resume Builder</h1>
+        </header>
+
+        <section id="form-section">
+            <h2>Enter Your Information</h2>
+            <form id="resume-form">
+                <label for="profile-pic">Upload Profile Picture:</label>
+                <input type="file" id="profile-pic" accept="image/*">
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="education">Education:</label>
+                <textarea id="education" rows="3" required></textarea>
+
+                <label for="skills">Skills:</label>
+                <textarea id="skills" rows="3" required></textarea>
+
+                <label for="experience">Work Experience:</label>
+                <textarea id="experience" rows="3" required></textarea>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+        </section>
+
+        <section id="resume-preview">
+            <h2>Resume Preview</h2>
+            <div id="resume-output">
+                <div class="profile-picture">
+                    <img src="" alt="">
+                </div>
+                
+                <!-- Resume content dynamically generated -->
+            </div>
+        </section>
+
+        <button id="toggle-skills-btn">Toggle Skills Section</button>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
